@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Register</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+       body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>a>li:hover::before{content: 'Welcome to';display:grid;font-weight: 100;font-size: x-small;
+        transform: rotateZ(360deg) scale(1.08) ;transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li:hover::after{content: 'page';display: block;font-weight: 100;font-size: x-small;
+        transform:rotateZ(360deg) scale(1.08);transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li{text-decoration: none;color:red}
+        #mainSection{display:flex;margin-left:50px;border:0px solid black;text-align:center;width:1400px;height:500px;background-color: white;color:crimson;}
+        #mainSection>section{border:0px solid black;text-align:center;width:300px;height:50px;background-color: aquamarine;color:crimson;}
+        #mainSection>section:hover{border:1px solid black;text-align:center;width:300px;height:50px;background-color: rgb(3, 84, 57);color:white;}
+        nav>ul>a>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:60px;text-align: center;}
+        nav>ul>a>li:hover{ display: inline-block;background-color: white;color: rebeccapurple;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:60px;text-transform: capitalize;
+            text-align: center;border: 1px solid red; transform:  rotateZ(360deg) scale(1.08);transition: .2s ease-out;}
+        
+            div{padding:20px}
+        #outerDiv:not(#download){display:flex;border:3px solid orangered;width:800px;height:550px;margin-left: 150px;margin-top:10px}
+        #outerDiv>#innerDiv{
+            border: 2px solid green;width:550px;height:420px;margin-left:80px;
+            border-radius: 30px;border-bottom-width: 20px;border-bottom-color: yellow;
+        }
+        #download,#print{height:50px;margin-top:150px;margin-left:15px}
+        h2{background-color: red;color:wheat; }
+        h3{padding:20px;padding-top:-20px;padding-bottom:40px;margin:-20px 0px -20px -20px;
+            background-color: orangered;color:white}
+        h4{background-color: aqua;}
+        span{margin-left: 50px;}
+        #mainSection>#outerDiv>#innerDiv>#divPhoto{width:150px;height:150px;border:1px solid black;float:right;margin-top:-100px}
+        #mainSection>#outerDiv>#innerDiv>a{border:1px solid black;text-decoration-line:none;width:140px;height:40px;border-radius:10px;float:left;background-color: rebeccapurple;color:white;margin-top:150px;margin-left:30px}
+         #mainSection>#outerDiv>#innerDiv>a:hover{border:1px solid black;text-decoration-line:none;width:140px;height:40px;border-radius:10px;float:left;background-color: yellowgreen;color:white;margin-top:150px;margin-left:30px}
+    </style>
+</head>
+<body>
+    <header>Helping Trust Blood Bank Management</header>
+    <nav>
+        <ul>
+            <a href="Homepage.html"><li>Home</li></a>
+            <a href="AdminLogin.html"><li>Admin</li></a>
+            <a href="DoctorDashboard.html"><li>Doctor</li></a>
+            <a href="DonorDashboard.html"><li>Donor</li></a>
+            <a href="ReceiverDashboard.html"><li>Receiver</li></a>
+            <a href="HelpingService.html"><li>Services</li></a>
+            <a href="HelpingAboutus.html"><li>About us</li></a>
+            <a href="Contact.html"><li>Contact us</li></a>
+        </ul>
+    </nav>
+    <section id="mainSection">
+        
+        <script src="DonorIdCardApply.js"></script>  
+        <div id="outerDiv">
+            <h3>P<br>R<br>E<br>V<br>I<br>E<br>W<br> <br>O<br>F<br> <br>D<br>O<br>N<br>O<br>R<br> <br>ID-CARD</h3>
+            <div id="innerDiv">
+                <h2>Helping Trust Blood Bank </h2>
+                <h4>DONOR ID CARD - MEMBERSHIP</h4>
+                <table id="previewTable">
+                    <tr><td>NAME</td><th><span id = "spanname"></span></th></tr>
+                    <tr><td>BLOOD GROUP</td><th><span id = "spanblood"></span></th><th></th></tr>
+                    <tr><td>GENDER</td><th><span id = "spangender"></span></th><th></th></tr>
+                    <tr><td>MOBILE</td><th><span id = "spanmobile"></span></th><th></th></tr>
+                    <tr><td>ADDRESS</td><th><span id = "spanaddress"></span></th><th></th></tr>
+                    <tr><td>VALIDATE UPTO</td><th><span id = "spanvalidate"></span></th><th></th></tr>
+                </table>
+                <div id="divPhoto"></div>
+                
+                <a id="download" download onclick="Open()">DOWNLOAD</a>
+                <!-- <input type="button" id="download1" value="DOWNLOAD" class="btn btn-danger" onclick="Open()"> -->
+                
+                <a id="print" download onclick="print()">PRINT</a>
+                <!-- <input type="button" id="print1" value="PRINT" class="btn btn-success" onclick="print()"> -->
+            </div>
+            
+        </div>
+    </section>
+    <!-- <script>
+            localStorage.setItem("lastname", "Smith");
+            document.getElementById("resultDiv").innerHTML = localStorage.getItem("lastname");
+        </script> 
+    -->
+    <script>
+         function Open() {
+            window.downloads.download("http://127.0.0.1:5500/DonorIdCardApply.html", "_blank");
+        }
+        function print() {
+            window.document.print("http://127.0.0.1:5500/DonorIdCardApply.html", "_blank");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Register</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+       body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>a>li:hover::before{content: 'Welcome to';display:grid;font-weight: 100;font-size: x-small;
+        transform: rotateZ(360deg) scale(1.08) ;transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li:hover::after{content: 'page';display: block;font-weight: 100;font-size: x-small;
+        transform:rotateZ(360deg) scale(1.08);transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li{text-decoration: none;color:red}
+        #mainSection{display:flex;margin-left:50px;border:0px solid black;text-align:center;width:1400px;height:700px;background-color: white;color:crimson;}   
+        #mainSection>section{border:0px solid black;text-align:center;width:300px;height:50px;background-color: aquamarine;color:crimson;margin-left:30px}
+        #mainSection>section:hover{border:1px solid black;text-align:center;width:300px;height:50px;background-color: rgb(3, 84, 57);color:white;}
+        nav>ul>a>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:60px;text-align: center;}
+        nav>ul>a>li:hover{ display: inline-block;background-color: white;color: rebeccapurple;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:60px;text-transform: capitalize;
+            text-align: center;border: 1px solid red; transform:  rotateZ(360deg) scale(1.08);transition: .2s ease-out;}
+        
+        pre{text-align: left;margin-left: 100px;}
+       div pre h4{text-align: center;color:blue}
+       #agreementSubmit{margin-left:500px;width:200px;margin-top: 10px;}
+       #agreementReset{margin-left:500px;width:200px;margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <header>Helping Trust Blood Bank Management</header>
+    <nav>
+        <ul>
+            <a href="Homepage.html"><li>Home</li></a>
+            <a href="AdminLogin.html"><li>Admin</li></a>
+            <a href="DoctorDashboard.html"><li>Doctor</li></a>
+            <a href="DonorDashboard.html"><li>Donor</li></a>
+            <a href="ReceiverDashboard.html"><li>Receiver</li></a>
+            <a href="HelpingService.html"><li>Services</li></a>
+            <a href="HelpingAboutus.html"><li>About us</li></a>
+            <a href="Contact.html"><li>Contact us</li></a>
+        </ul>
+    </nav>
+    <section id="mainSection">
+        
+        <script src="DonorAgreementDeal.js"></script>  
+        
+        <div>
+            <h3>DEPOSIT AND PLEDGE AGREEMENT</h3><br>
+            <pre>
+<p>=====================================================================================================================================================================
+                <h4>Term of Donation</h4>
+<p>=====================================================================================================================================================================
+<p><input type="checkbox" required>The Collection will remain on deposit in the Institution for a term of not less than ten years beginning on the effective date of this agreement(“Term”). 
+<p><input type="checkbox" required>Any future gift of all or any part of the Collection to the Institution will terminate the deposit of the Collection or part thereof.
+<p><input type="checkbox" required>If, after a period of twenty years after the effective date of this agreement, this deposit agreement has not been extended, or title to the Collection has
+not been transferred to the Institution, the Institution may seek and secure title to the Collection, provided that the Institution first makes reasonable 
+efforts to contact the Depositor regarding the disposition of the deposit. </p>
+<p>=====================================================================================================================================================================
+                <h4>Pledge: Transfer of Title to Institution</h4>
+<p>=====================================================================================================================================================================
+<p><input type="checkbox" name="" id="" required> The Depositor hereby pledges to transfer title in the Collection to the Institution during or at the end of the Term.
+<p><input type="checkbox" name="" id="" required>The Depositor covenants that, upon the Depositor`s death, title to any part of the Collection then remaining on deposit will pass to the Institution 
+by provisions taking effect at the Depositor`s death (whether by the Depositor`s will or otherwise), and that, to the extent that this pledge is not fulfilled 
+by provisions taking effect at the Depositor`s death, the pledge shall be fulfilled by the Depositor`s estate, as an enforceable obligation thereof.
+<p><input type="checkbox" name="" id="" required>The Depositor cognizes and acknowledges that the Institution will make expenditures, enter into contracts, perform labor, and/or engage in other 
+activities in reliance on and as consideration for the foregoing pledge and the fulfillment thereof. This pledge is enforceable against the 
+Depositor and the Depositor’s heirs, administrators, assigns, and estate.
+<form action="DonorBloodCheckup.html">
+    <input type="checkbox" name="" id=""> I Agreed adn hereby declare with the above statement
+<input type="submit" value="AGREED" id="agreementSubmit" class="btn btn-warning"  onclick="agreementFunction()">
+<input type="button" value="RESET" id="agreementReset" class="btn btn-danger"  onclick="resetFunction()">
+    </form>
+            </pre>
+        </div>
+        
+        
+    </section>
+    <!-- <script>
+            localStorage.setItem("lastname", "Smith");
+            document.getElementById("resultDiv").innerHTML = localStorage.getItem("lastname");
+        </script> 
+    -->
+    
+</body>
+</html>

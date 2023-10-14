@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:50px;text-align: center;}
+        nav>ul>li:hover{display: inline-block;background-color: white;color:red;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:50px;
+            text-align: center;border: 1px solid red;}
+        nav>ul>li>a{text-decoration: none;color:red}
+        .secAnimation{display:flex;flex-direction: row;}
+        .secAnimation>div{text-align: center; border-bottom-left-radius: 30px;border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;border-top-right-radius: 30px;}
+        
+
+
+        .secAnimation>.div1{width:110px;height:100px;background-color:#a8f806;}
+        .secAnimation>.div2{width:110px;height:100px;background-color:yellow;color:brown ;font-size: 100px;margin-top: 100px;}
+        .secAnimation>.div3{width:110px;height:100px;background-color:blueviolet;color:orangered;font-size: 160px}
+        .secAnimation>.div4{width:100px;height:100px;background-color:#534703 ;color: red;font-size: 100px;margin-top: 100px}
+        .secAnimation>.div5{width:100px;height:100px;background-color:brown;color:orange;font-size: 160px}
+        .secAnimation>.div6{width:100px;height:100px;background-color:#ff00b3;color:brown ;font-size: 100px;margin-top: 100px;}
+        .secAnimation>.div7{width:100px;height:100px;background-color:green ;color:greenyellow;font-size: 160px}
+        .secAnimation>.div8{width:100px;height:100px;background-color:darkcyan ;color: yellow;font-size: 100px;margin-top: 100px}
+        .secAnimation>.div9{width:100px;height:100px;background-color:yellowgreen;color:red;font-size: 160px}
+        .secAnimation>.div10{width:100px;height:100px;background-color:hsl(159, 100%, 50%);color:brown ;font-size: 100px;margin-top: 100px;}
+        .secAnimation>.div11{width:100px;height:100px;background-color:blueviolet;color:orangered;font-size: 160px}
+        .secAnimation>.div12{width:100px;height:100px;background-color: lightcoral ;color: red;font-size: 100px;margin-top: 100px}
+        .secAnimation>.div13{width:100px;height:100px;background-color:brown;color:orange;font-size: 160px}
+        .secAnimation>.div14{width:100px;height:100px;background-color:skyblue;color:brown ;font-size: 100px;margin-top: 100px;}
+        .secAnimation>.div15{width:100px;height:100px;background-color:lightseagreen ;color:greenyellow;font-size: 160px}
+        .secAnimation>.div16{width:100px;height:100px;background-color: violet ;color: yellow;font-size: 100px;margin-top: 100px}
+        .secAnimation>a>#div1,#div2,#div3,#div4{border:1px solid black;width:250px;height:250px;margin:20px;background-color: darkseagreen;color:white}
+        .secAnimation>a>#div1:hover,#div2:hover,#div3:hover,#div4:hover{border:1px solid black;width:300px;height:300px;
+                            border-bottom-width: 8px;border-bottom-color: darkgreen;background-color: lightseagreen;
+                            text-align: center;font-stretch: extra-expanded;font-size: 30px;font-variant: small-caps}
+
+        .secAnimation>*{
+          font-size: 120px;
+          animation: p3 2.9s linear infinite;
+        }
+        @keyframes p3{
+              0% {opacity: 0;}
+              50% {opacity: 1;}
+              100% {opacity: 0;}
+          }
+            a{text-decoration: none}
+            i{color:aliceblue}
+           h1{color: crimson}
+        .section1{border:0px solid black;width: 1400px;height:600px;display: flex;}
+        section>img{border: 0px solid black;width: 680px;height: 500px;padding-left:50px;
+            padding-top:10px;}
+        .section1>#divId{border: 0px solid black;width: 680px;height: 400px;padding-left:150px;
+            padding-top:150px;border-radius: 50px;}
+        .section11{display:flex;border:1px solid black;width:1400px;height:280px;margin-left:50px;}
+        .section11>#div11{border:1px solid black;width:600px;height:220px;padding:30px;margin:30px;
+            color:white;background-color: red;font-size: 30px;text-align: center;
+        border-bottom-left-radius: 100px;border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;border-top-right-radius: 100px;
+        }
+        .section11>#div12{border:1px solid black;width:600px;height:220px;padding:30px;margin:30px;
+            color:white;background-color: red;font-size: 30px;text-align: center;
+            border-bottom-left-radius: 100px;border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;border-top-right-radius: 100px;}
+        .section11>#div11>h1>i{font-size:80px;}
+        .section11>#div12>h1>i{font-size:80px;}    
+        input{margin-left:700px;padding:20px}
+        
+        #divId{font-size: 30px;width: 600px;}
+        .section2{text-align: center;}
+        .section2>h4{color:red}
+        .section3>#imgId2{width: 1000px;height: 80px;padding-left: 25px;}
+        footer{margin-top: 650px;background-color: tomato;}
+        footer>h5{text-align: center;padding-top: 15px;}
+        footer>section{display: flex;width:1500px;height:400px;
+            border: 1px solid black;}
+        footer>section>div{border:0px solid black;color:orangered;width: 500px;height: 350px;}
+    </style>
+</head>
+<body>
+    <header>Helping Trust Blood Bank Management</header>
+    <!-- <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="AdminLogin.html">Admin</a></li>
+            <li><a href="DoctorDashboard.html">Doctor</a></li>
+            <li><a href="DonorDashboard.html">Donor</a></li>
+            <li><a href="ReceiverDashboard.html">Receiver</a></li>
+            <li><a href="HelpingService.html">Service</a></li>
+            <li><a href="HelpingAboutus.html">About us</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+        </ul>
+    </nav> -->
+    <section class="secAnimation">
+        <div class="div1"><p id="p1" class="p1"></p></div>
+        <div class="div2"><p id="p2" class="p2"></p></div>
+        <div class="div3"><p id="p3" class="p3">H</p></div>
+        <div class="div4"><p id="p4" class="p4">E</p></div>
+        <div class="div5"><p id="p5" class="p5">L</p></div>
+        <div class="div6"><p id="p6" class="p6">P</p></div>
+        <div class="div7"><p id="p7" class="p7">I</p></div>
+        <div class="div8"><p id="p8" class="p8">N</p></div>
+        <div class="div9"><p id="p9" class="p9">G</p></div>
+        <div class="div10"><p id="p10" class="p10"></p></div>
+        <div class="div11"><p id="p11" class="p11">T</p></div>
+        <div class="div12"><p id="p12" class="p12">R</p></div>
+        <div class="div13"><p id="p13" class="p13">U</p></div>
+        <div class="div14"><p id="p14" class="p14">S</p></div>
+        <div class="div15"><p id="p15" class="p15">T</p></div>
+        <div class="div16"><p id="p16" class="p16"></p></div>
+        <div class="div17"><p id="p17" class="p17"></p></div>
+    </section>
+    <br />
+    <br />
+    <marquee>
+        <p><h3> Hello Everyone, All are welcome to your Service which is termed as</h3> <h1>Helping Trust Blood Bank Management </h1></p>
+    </marquee>
+    <section class="section12">
+        <form action="AdminLogin.html">
+            <input type="submit" value="CLICK HERE TO PROCEED" class="btn btn-primary">
+        </form>
+    </section>
+    <br>
+    <section class="section11">
+        <div id="div11">Total Blood Received <br> <h1><i>123432</i></h1> </div>
+        <div id="div12">Blood Donated to the needy <br><h1><i>53431</i></h1></div>
+        <div id="div12">Blood Storage right now <br><h1><i>70001</i></h1></div>
+    </section>
+   
+    <section class="section2">
+        <h4>NOTES ABOUT DONATION</h4>
+        <p>The human body contains five liters of blood, which is made of several useful components i.e. <span ></span>Whole blood, Platelet, and Plasma.</span></p>
+        <span>Each type of component has several medical uses and can be used for different medical treatments. your blood donation determines the best donation for you to make.</span><br>
+        <i>For plasma and platelet donation you must have donated whole blood in past two years.</i>
+    </section>
+    <section class="section3">
+        <div id="imgId2">
+            <img src="learnAboutDonation.png" alt="learnAboutDonation">
+        </div>
+    </section>
+    <footer class="text-center text-lg-start text-white" style="background-color: #0a265f">
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold">Company name</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                  <h4>HELP TRUST</h4>
+                  <p>
+                    We are here to make you happy,and to give a memorable event that you never expect.
+                    We reach your expectations....@cheerevents
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">EVENTS</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                <p>
+                  <a href="#!" class="text-white">Blood Donating</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Blood Collecting</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white">Blood Stock</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-white">Blood Distributing</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+      
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold">Office Locations</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                  <p>
+                    Chennai
+                  </p>
+                  <p>
+                    Madurai
+                  </p>
+                  <p>
+                    Coimbatore
+                  </p>
+                  <p>
+                    Tambaram
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p><i class="fas fa-home mr-3"></i>Cheif Executive Officer</p>
+                    <p><i class="fas fa-envelope mr-3"></i>ceohelptrust@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> + 91 9999999999</p>
+                    <p><i class="fas fa-print mr-3"></i> + 91 9876543210</p>
+                  </div>
+        
+                </div>
+        
+              </div>
+            </section>
+        
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2023 Copyright:
+              <a class="text-white" href="https://HelpingTrust.com/">HelpTrust</a>
+            </div>
+                      
+    </footer>
+</body>
+</html>

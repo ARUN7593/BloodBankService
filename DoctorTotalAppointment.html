@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Total Appointment</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>a>li:hover::before{content: 'Welcome to';display:grid;font-weight: 100;font-size: x-small;
+        transform: rotateZ(360deg) scale(1.08) ;transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li:hover::after{content: 'page';display: block;font-weight: 100;font-size: x-small;
+        transform:rotateZ(360deg) scale(1.08);transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li{text-decoration: none;color:red}
+        #mainSection{display:grid;margin-left:200px;border:0px solid black;text-align:center;width:1000px;height:500px;background-color: white;color:crimson;}
+        #mainSection>section{border:0px solid black;text-align:center;width:300px;height:50px;background-color: aquamarine;color:crimson;}
+        #mainSection>section:hover{border:1px solid black;text-align:center;width:300px;height:50px;background-color: rgb(3, 84, 57);color:white;}
+        nav>ul>a>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:60px;text-align: center;}
+        nav>ul>a>li:hover{ display: inline-block;background-color: white;color: rebeccapurple;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:60px;text-transform: capitalize;
+            text-align: center;border: 1px solid red; transform:  rotateZ(360deg) scale(1.08);transition: .2s ease-out;}
+        
+            h3{text-align: center;}
+        table{border:1px solid black;margin:100px}
+        th{border:1px solid black;padding:20px;background-color: yellowgreen;}
+        td{border:1px solid black;padding:10px}
+        #searchSection{
+            border:0px solid ;width:300px;height:36px;margin-left:360px;margin-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>Helping Trust Blood Bank Management</header>
+    <nav>
+        <ul>
+            <a href="Homepage.html"><li>Home</li></a>
+            <a href="AdminLogin.html"><li>Admin</li></a>
+            <a href="DoctorDashboard.html"><li>Doctor</li></a>
+            <a href="DonorDashboard.html"><li>Donor</li></a>
+            <a href="ReceiverDashboard.html"><li>Receiver</li></a>
+            <a href="HelpingService.html"><li>Services</li></a>
+            <a href="HelpingAboutus.html"><li>About us</li></a>
+            <a href="Contact.html"><li>Contact us</li></a>
+        </ul>
+    </nav>
+    <h3>DOCTOR TOTAL APPOINTMENT</h3>
+    
+    <section id="mainSection">
+        <script src="DoctorTotalAppointment.js"></script>
+        <section id="searchSection">
+            <div class="input-group">
+                <form class="form-outline">
+                  <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search By id"/>
+                  <button id="search-button" type="button"  class="btn btn-primary" onclick="searchForAppointment()">
+                    <i class="fa fa-search"></i>SEARCH
+                  </button>
+                </form> 
+            </div>
+        </section>
+        <div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>GENDER</th>
+                    <th>MOBILE</th>
+                    <th>BLOOD GROUP</th>
+                    <th>LOCATION</th>
+                    <th>STATUS</th>
+                    <th>APPOINTMENT</th>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>O+ve</td>
+                    <td>Chennai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>A-ve</td>
+                    <td>Madurai</td>
+                    <td>Not Available</td>
+                    <td><input type="button" value="UNCHECK" class="btn btn-danger"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>A-ve</td>
+                    <td>Madurai</td>
+                    <td>Not Available</td>
+                    <td><input type="button" value="UNCHECK" class="btn btn-danger"></td>
+                </tr>
+               
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>O+ve</td>
+                    <td>Chennai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>A-ve</td>
+                    <td>Madurai</td>
+                    <td>Not Available</td>
+                    <td><input type="button" value="UNCHECK" class="btn btn-danger"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>B+ve</td>
+                    <td>Madurai</td>
+                    <td>Available</td>
+                    <td><input type="button" value="CHECK" class="btn btn-success"></td>
+                </tr>
+                <tr>
+                    <td>DONID1234</td>
+                    <td>RAFEER KHAN</td>
+                    <td>MALE</td>
+                    <td>9876543210</td>
+                    <td>A-ve</td>
+                    <td>Madurai</td>
+                    <td>Not Available</td>
+                    <td><input type="button" value="UNCHECK" class="btn btn-danger"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:60px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>a>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:60px;text-align: center;}
+        nav>ul>a>li:hover{ display: inline-block;background-color: white;color: rebeccapurple;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:60px;text-transform: capitalize;
+            text-align: center;border: 1px solid red; transform:  rotateZ(360deg) scale(1.08);transition: .2s ease-out;}
+        nav>ul>a>li:hover::before{content: 'Welcome to';display:grid;font-weight: 100;font-size: x-small;
+        transform: rotateZ(360deg) scale(1.08) ;transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li:hover::after{content: 'page';display: block;font-weight: 100;font-size: x-small;
+        transform:rotateZ(360deg) scale(1.08);transition:.2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li{text-decoration: none;color:red}
+    </style>
+</head><body>
+    <header>Helping Trust Blood Bank Management</header>
+    <nav>
+        <ul>
+            <a href="Homepage.html"><li>Home</li></a>
+            <a href="AdminLogin.html"><li>Admin</li></a>
+            <a href="DoctorDashboard.html"><li>Doctor</li></a>
+            <a href="DonorDashboard.html"><li>Donor</li></a>
+            <a href="ReceiverDashboard.html"><li>Receiver</li></a>
+            <a href="HelpingService.html"><li>Services</li></a>
+            <a href="HelpingAboutus.html"><li>About us</li></a>
+            <a href="Contact.html"><li>Contact us</li></a>
+        </ul>
+    </nav>
+    <form action="">
+        <input type="button" style="margin:160px" class="btn btn-danger" id="btn" value="REQUEST FOR APPROVAL" onclick="changeFunction()">
+        <input type="submit" onclick="notifyFunction()" id="notify"class="btn btn-info" value="notification"> 
+
+        <script>
+            
+            function changeFunction()
+            {     
+                document.getElementById('btn').className='btn btn-success';
+                document.getElementById('btn').value='REQUEST ACCEPTED';
+                
+            }
+
+            function notifyFunction()
+            {
+                const button = document.getElementById('notify')
+                button.addEventListener("click", ()=> {
+                Notification.requestPermission().then(perm => {
+                    if(perm === 'granted')
+                    {
+                        new Notification("Example notification", 
+                        {
+                            body: "This is more text",
+                        })
+                    }
+                })
+                })    
+            }
+            // {
+            //     let permission = Notification.permission;
+            //     if(permission === "granted")
+            //     {
+            //         showNotification();
+            //     } 
+            //     else if(permission === "default")
+            //     {
+            //         requestAndShowPermission();
+            //     } 
+            //     else 
+            //     {
+            //         alert("Use normal alert");
+            //     }
+
+            //     function showNotification() 
+            //     {
+            //         if(document.visibilityState === "visible") 
+            //         {
+                     
+            //         var title = "JavaScript Jeep";
+            //         icon = "https://homepages.cae.wisc.edu/~ece533/images/airplane.png";
+            //         var body = "Message to be displayed";
+            //         var notification = new Notification('Title', { body, icon });
+            //         notification.onclick = () => { 
+            //             notification.close();
+            //             window.parent.focus();
+            //         }
+            //             return true;
+            //         }
+            //     }
+            //     function requestAndShowPermission() 
+            //     {
+            //         Notification.requestPermission(function (permission) 
+            //         {
+            //             if (permission === "granted") 
+            //             {
+            //                     showNotification();
+            //             }
+            //         });
+            //     }
+            // }
+            
+        </script>
+        
+    </form>
+</body>
+</html>

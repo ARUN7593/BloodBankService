@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{background-color: rgb(238, 238, 238);}
+        header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
+                padding: 10px;margin: 10px;}
+        nav{background-color: red;padding: 10px;margin: 10px;width:1400px;height:50px;color:aliceblue}
+        nav>ul{list-style: none;}
+        nav>ul>a>li{display: inline-block;background-color: rgb(238, 238, 238);color:red;
+            font-size:20px;border-color: white;border:0px solid white;
+            text-decoration: none;border-radius: 5px;width:150px;height:60px;text-align: center;}
+        nav>ul>a>li:hover{ display: inline-block;background-color: white;color: rebeccapurple;font-size:20px;
+            text-decoration: none;border-color: red;border-radius: 5px;width:150px;height:60px;text-transform: capitalize;
+            text-align: center;border: 1px solid red; transform:  rotateZ(360deg) scale(1.08);transition: .2s ease-out;}
+        nav>ul>a>li:hover::before{content: 'Welcome to';display:grid;font-weight: 100;font-size: x-small;
+        transform: rotateZ(360deg) scale(1.08) ;transition:all .2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li:hover::after{content: 'page';display: block;font-weight: 100;font-size: x-small;
+        transform:rotateZ(360deg) scale(1.08);transition:all .2s ease-out;text-transform: capitalize;}
+        nav>ul>a>li{text-decoration: none;color:red}
+        #mainSection{display:flex;margin-left:50px;border:0px solid black;text-align:center;width:1400px;height:900px;background-color: white;color:crimson;}
+        #mainSection>fieldset{display:flex;height:100px}
+        #mainSection>fieldset>div:not(:last-child){border:0px solid black;text-align:center;width:280px;height:150px;
+            background-color: aquamarine;color:crimson;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;}
+        #mainSection>fieldset>div:hover:not(:last-child){border:1px solid black;text-align:center;width:280px;height:150px;background-color: rgb(3, 84, 57);color:white;}
+        
+            h3{text-align: center;}
+            legend{text-align: left;}
+       #divConic1{
+            border:1px solid black;width:200px;height:180px;
+            /* background: conic-gradient(red 90deg,green 90deg,blue 90deg,alpha 90deg); */
+            background: conic-gradient(red 36deg, green 36deg 170deg, yellow 170deg);
+            border-radius: 50%;
+        }
+        #divConic2{
+            border:1px solid black;width:200px;height:180px;
+            /* background: conic-gradient(red 90deg,green 90deg,blue 90deg,alpha 90deg); */
+            background: conic-gradient(pink 36deg, cyan 36deg 170deg,orangered 36deg 170deg);
+            border-radius: 50%;
+        }
+        #divConic3{
+            border:1px solid black;width:200px;height:180px;
+            /* background: conic-gradient(red 90deg,green 90deg,blue 90deg,alpha 90deg); */
+            background: conic-gradient(maroon 36deg 170deg, yellowgreen 170deg,orangered 36deg);
+            border-radius: 50%;
+        }
+        #secSolution{
+            margin-top: 100px;
+
+        }
+    </style>
+</head><body>
+    <header>Helping Trust Blood Bank Management</header>
+    <nav>
+        <ul>
+            <a href="Homepage.html"><li>Home</li></a>
+            <a href="AdminLogin.html"><li>Admin</li></a>
+            <a href="DoctorDashboard.html"><li>Doctor</li></a>
+            <a href="DonorDashboard.html"><li>Donor</li></a>
+            <a href="ReceiverDashboard.html"><li>Receiver</li></a>
+            <a href="HelpingService.html"><li>Services</li></a>
+            <a href="HelpingAboutus.html"><li>About us</li></a>
+            <a href="Contact.html"><li>Contact us</li></a>
+        </ul>
+    </nav>
+    
+    <h3>Admin Dashboard</h3>
+    <section id="mainSection">
+        <fieldset>
+            <legend>DOCTOR</legend>
+                <div onclick="approvalFunction()">Approval of Registration<span class="badge badge-bg-danger translate-middle rounded-pill">10</span></div>
+                <div onclick="manualOperationFunction()" id="divManual">Manual Operation<span class="badge bg-danger translate-middle rounded-pill">22</span></div>
+                <div onclick="approvalFunction()">Appointment neglect<span class="badge bg-danger translate-middle rounded-pill">14</span></div>
+                <div onclick="approvalFunction()">Request for Permission<span class="badge bg-danger translate-middle rounded-pill">5</span></div>
+                <div id="divConic1"></div>
+        </fieldset>
+        <fieldset>
+            <legend>DONOR</legend>
+                <div onclick="approvalFunction()">Approval of Registration<span class="badge bg-danger translate-middle rounded-pill">5</span></div>
+                <div onclick="approvalFunction()">Approval of Login<span class="badge bg-danger translate-middle rounded-pill">32</span></div>
+                <div onclick="approvalFunction()">Appointment neglect<span class="badge bg-danger translate-middle rounded-pill">10</span></div>
+                <div onclick="approvalFunction()">Request for Certification<span class="badge bg-danger translate-middle rounded-pill">6</span></div>
+                <div id="divConic2"></div>
+        </fieldset>
+        <fieldset>
+            <legend>RECEIVER</legend>
+                <div onclick="approvalFunction()">Approval of Registration<span class="badge bg-danger translate-middle rounded-pill">10</span></div>
+                <div onclick="approvalFunction()">Approval of Login<span class="badge bg-danger translate-middle rounded-pill">2</span></div>
+                <div onclick="approvalFunction()">Blood Donor Information<span class="badge bg-danger translate-middle rounded-pill">4</span></div>
+                <div onclick="approvalFunction()">Request for Certification<span class="badge bg-danger translate-middle rounded-pill">14</span></div>
+                <div id="divConic3"></div>
+        </fieldset>
+        
+    </section>
+    <section id="secSolution"></section>
+    <script src="AdminDashboard.js"></script>
+    
+</body>
+</html>

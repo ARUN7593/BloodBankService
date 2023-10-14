@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>select tag</title>
+    </head>
+    <body>
+<script language="Javascript">
+    function validate()
+    {
+        if(document.form.city.selectedIndex=="")
+        {
+            document.getElementById("span1").innerHTML="Please select city!";
+            return false;
+        }
+        var sel = document.getElementById("city");
+        //get the selected option
+        var selectedText = sel.options[sel.selectedIndex].text;
+        document.getElementById("span1").innerHTML="You have selected : "+selectedText;
+        return true;
+    }
+</script>
+<form name="form" method="get" onClick="validate()">
+    <pre>
+    <select name="city" id="city">
+        <option value="Select">Select</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Agra">Agra</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+    </select>
+    <input type="submit" name="Submit" value="Submit">
+    <span id="span1"></span>
+    </pre>
+
+    <form>  
+        <input type="radio" class="male" name="gender" value="Male"> Male
+        <input type="radio" class="female" name="gender" value="Female"> Female <br>
+        <span id="span11"></span><br>
+        <button id="submit" type="button"> Submit </button>  
+       </form> 
+       <script>
+        document.getElementById("submit").addEventListener("click", function() 
+        {
+            const male = document.querySelector('.male');
+            const female = document.querySelector('.female');
+            if(!male.checked && !female.checked){
+                alert('Please choose your Gender: Male or Female ')
+                document.getElementById("span11").innerHTML="Please select gender";
+                document.getElementById("span11").innerHTML="Please select gender";
+                document.getElementById("span11").style.color="red";
+                
+            }else{
+                setTimeout(alert('Form submitted!'),3000)
+                document.getElementById("span11").innerHTML="valid"+document.getElementsByName("gender");
+                document.getElementById("span11").style.color="green";
+                
+            }
+        }); 
+       </script>
+
+</form>
+</body>
+</html>

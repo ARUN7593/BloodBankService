@@ -1,0 +1,109 @@
+<! DOCTYPE html>  
+<html>  
+    <head>  
+        <meta http-equiv = "Content-Type"  
+            content = "text/html; charset=UTF-8" />  
+        <title> Example of Create a 3D Text Effect using HTML and CSS  </title>  
+        <meta name = "description"  
+            content = "jQuery tooltip plugin" />  
+        <meta content = "width=800, initial-scale=1"  
+        name = "viewport" />  
+<script src =  
+"https://code.jquery.com/jquery-3.5.1.min.js">  
+        </script>               
+        <script src =  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"> </script>          
+<style>  
+h2 {  
+  margin-top: 40px;  
+  text-transform: none;  
+  font-size: 1.75em;  
+  font-weight: bold;  
+   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;  
+  color: white;   
+  letter-spacing: -0.005em;   
+  word-spacing: 1px;  
+  letter-spacing: none;  
+  text-align: center;  
+}  
+h4 {  
+  margin-top: 40px;  
+  text-transform: none;  
+  font-size: 1.75em;  
+  font-weight: bold;  
+   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;  
+  color: #999;   
+  letter-spacing: -0.005em;   
+  word-spacing: 1px;  
+  letter-spacing: none;  
+  text-align: center;  
+  color: white;  
+}  
+html {  
+    height: 100%;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+     background-image: radial-gradient(ellipse farthest-corner at center, #7abcff 0%,#4096ee 100%);  
+}  
+body {  
+    height: 100%;     
+    align-items: center;  
+    justify-content: center;  
+     background-image: radial-gradient(ellipse farthest-corner at center, #7abcff 0%,#4096ee 100%);  
+}  
+.box {  
+    display: flex;  
+}  
+.box .inner {  
+    width: 400px;  
+    height: 200px;  
+    line-height: 200px;  
+    font-size: 4em;  
+    font-family: sans-serif;  
+    font-weight: bold;  
+    white-space: nowrap;  
+    overflow: hidden;  
+}  
+.box .inner:first-child {  
+    background-color: indianred;  
+    color: darkred;  
+    transform-origin: right;  
+    transform: perspective(100px) rotateY(-15deg);  
+}  
+.box .inner:last-child {  
+    background-color: lightcoral;  
+    color: antiquewhite;  
+    transform-origin: left;  
+    transform: perspective(100px) rotateY(15deg);  
+}  
+.box .inner span {  
+    position: absolute;  
+    animation: marquee 5s linear infinite;  
+}  
+.box .inner:first-child span {  
+    animation-delay: 2.5s;  
+    left: -100%;  
+}  
+@keyframes marquee {  
+    from {  
+        left: 100%;  
+    }  
+    to {  
+        left: -100%;  
+    }  
+}  
+</style>  
+<body>  
+<h4> Example </h4>  
+<h2> Create a 3D Text Effect using HTML and CSS </h2>  
+<div class = "box">  
+  <div class = "inner">  
+    <span> Hello World </span>  
+  </div>  
+  <div class = "inner">  
+    <span> Hello World </span>  
+  </div>  
+</div>  
+</body>  
+</html>  
