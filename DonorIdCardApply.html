@@ -12,6 +12,13 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- html2canvas library -->
+    <script src="js/html2canvas.min.js"></script>
+
+    <!-- jsPDF library -->
+    <script src="js/jsPDF/dist/jspdf.umd.js"></script>
+
     <style>
        body{background-color: rgb(238, 238, 238);}
         header{text-align: center;background-color: rgb(238, 238, 238);color:red;font-size:30px;
@@ -82,27 +89,70 @@
                 </table>
                 <div id="divPhoto"></div>
                 
-                <a id="download" download onclick="Open()">DOWNLOAD</a>
-                <!-- <input type="button" id="download1" value="DOWNLOAD" class="btn btn-danger" onclick="Open()"> -->
+                <!--<a id="download" download onclick="download()">DOWNLOAD</a>-->
+                 <input type="button" id="download" value="DOWNLOAD" class="btn btn-danger" onclick="download()">
                 
-                <a id="print" download onclick="print()">PRINT</a>
-                <!-- <input type="button" id="print1" value="PRINT" class="btn btn-success" onclick="print()"> -->
+                <!-- <a id="print" onclick="print()">PRINT</a> -->
+                <input type="button" id="print" value="PRINT" class="btn btn-success" onclick="print()" >
             </div>
             
         </div>
     </section>
-    <!-- <script>
-            localStorage.setItem("lastname", "Smith");
-            document.getElementById("resultDiv").innerHTML = localStorage.getItem("lastname");
-        </script> 
-    -->
-    <script>
-         function Open() {
-            window.downloads.download("http://127.0.0.1:5500/DonorIdCardApply.html", "_blank");
+    
+     <script>
+        function download()
+        {
+            alert("Do you want to download ?");
+            document.getElementById("download").addEventListener("click", displaydownload);
+
+            function displaydownload()  
+            {
+                // //window.jsPDF = window.jspdf.jsPDF;
+                //     var doc = new jsPDF();
+                    
+                //     // Source HTMLElement or a string containing HTML.
+                //     var elementHTML = document.querySelector("#innerDiv");
+
+                //     doc.html(elementHTML, {
+                //         callback: function(doc) {
+                //             // Save the PDF
+                //             doc.save('document-html.pdf');
+                //         },
+                //         margin: [10, 10, 10, 10],
+                //         autoPaging: 'text',
+                //         x: 0,
+                //         y: 0,
+                //         width: 190, //target width in the PDF document
+                //         windowWidth: 675 //window width in CSS pixels
+                //     });
+                // var divToPrint = document.getElementById("innerDiv");
+                // var divToPrintHTML = '<style type="text/css" media="print">@page { size: landscape; }</style>'+divToPrint.outerHTML;
+
+                // newWin = window.open();
+                // newWin.document.write(divToPrintHTML);
+
+                // newWin.print();
+                // newWin.close();
+            }
         }
-        function print() {
-            window.document.print("http://127.0.0.1:5500/DonorIdCardApply.html", "_blank");
+        function print() 
+        {
+            alert("Do you want to print ?");
+            document.getElementById("print").addEventListener("click", displayprint);
+
+            function displayprint()  
+            {    
+                var divToPrint = document.getElementById("innerDiv");
+                var divToPrintHTML = '<style type="text/css" media="print">@page { size: landscape; }</style>'+divToPrint.outerHTML;
+
+                //newWin = window.open();
+                newWin.document.write(divToPrintHTML);
+
+                newWin.print();
+                newWin.close();
+            }
         }
+		
     </script>
 </body>
 </html>

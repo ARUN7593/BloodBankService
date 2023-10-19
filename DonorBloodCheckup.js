@@ -218,10 +218,18 @@ mainSection.appendChild(div1);
     {
         var donorid = document.checkupForm.donorid;
         var donorid_len = donorid.value.length;
-        if (donorid_len == 0 || donorid_len >= 12 || uname_len < 7)
+        if (donorid_len == 0 || donorid_len == "")
         {
-            alert("User Name should not be empty / length be between 7 to 12");
-            document.getElementById('span1').innerHTML = " Full Name should not be empty / length be between 5 to 12";
+            alert("Id should not be empty");
+            document.getElementById('span1').innerHTML = " Id should not be empty";
+            document.getElementById('span1').style.color="red";
+            uname.focus();
+            return false;
+        }
+        else if(donorid_len >= 12 || donorid_len < 7)
+        {
+            alert("ID should length be between 7 to 12");
+            document.getElementById('span1').innerHTML = " ID should length be between 5 to 12";
             document.getElementById('span1').style.color="red";
             uname.focus();
             return false;

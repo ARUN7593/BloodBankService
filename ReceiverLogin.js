@@ -1,5 +1,5 @@
 let mainSection = document.getElementById("mainSection");
-
+mainSection.style="background-image:url(https://thumbs.dreamstime.com/z/doctor-holding-digital-device-to-show-hologram-global-conne-connection-world-wide-illustration-medical-technology-129666663.jpg?w=992);background-repeat:norepeat";
     let form = document.createElement("form");
     form.setAttribute("action", "AdminDashboard.html");
     form.name="loginpage";
